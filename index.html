@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>stop_watch_app</title>
+</head>
+
+<body>
+  <style media="screen">
+    body {
+      background-image: url(./subtle_dots.png);
+    }
+    .main_dis, .inl{
+      display: inline;
+    }
+    .start, .lap, .btn{
+      width:36%;
+    }
+    .btn{
+      font-weight: bolder;
+      font-size: 1.2em;
+    }
+
+  </style>
+
+
+<!-- MAIN WATCH: -->
+  <div class="container">
+
+    <div class="center-align grey-text text-darken-2">
+      <span> <h3 class="main_dis" id="lapminute">00</h3>   <h3 class="inl">:</h3>  </span>
+      <span> <h3 class="main_dis" id="lapsecond">00</h3>   <h3 class="inl">:</h3>  </span>
+      <span> <h3 class="main_dis" id="lapcentisecond">00</h3>  </span>
+    </div>
+
+<div class="clearfix">
+
+</div>
+
+    <div class="center-align">
+      <span> <h1 class="l_dis inl" id="timeminute">00</h1>   <h1 class="inl">:</h1>  </span>
+      <span> <h1 class="l_dis inl" id="timesecond">00</h1>   <h1 class="inl">:</h1>  </span>
+      <span> <h1 class="l_dis inl" id="timecentisecond">00</h1>                      </span>
+    </div>
+
+
+  </div>
+
+<div class="container">
+  <div class="center-align">
+    <button class="btn btn-large z-depth-3 black-text transparent control" id="startButton">start</button>
+    <button class="btn btn-large z-depth-3 black-text transparent control" id="stopButton">stop</button>
+    <button class="btn btn-large z-depth-3 black-text transparent control" id="resumeButton">resume</button>
+
+    <button id="lapButton" class="btn z-depth-3 btn-large black-text transparent control">lap</button>
+    <button id="resetButton" class="btn z-depth-3 btn-large black-text transparent control">reset</button>
+
+
+  <div id="laps" class="collection" style="max-height:260px; overflow-y: scroll;">
+
+  </div>
+
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="./logic.js" charset="utf-8"></script>
+</body>
+
+</html>
